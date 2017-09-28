@@ -1,0 +1,15 @@
+<!-- <h1>Home#index</h1> -->
+<h1>Twitter</h1>
+<p><%= @brand %></p>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<ul>
+  <% @tweet.each do |tweet|%>
+  <li><%= tweet.message %>
+    <p class = "tweet">
+    <%#= tweet.created_at %>
+    <%= tweet.created_at.to_s(:created_at) %>
+    </p>
+  </li>
+  <% end %>
+</ul>
